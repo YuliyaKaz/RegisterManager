@@ -1,15 +1,10 @@
 package ru.coffeemagnate.dispatcher.model;
 
-//import com.vladmihalcea.hibernate.type.json.JsonBinaryType;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
-//import org.hibernate.annotations.TypeDef;
 import java.sql.Date;
 import java.sql.Time;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
 
 @Builder
 @Entity
@@ -53,28 +48,8 @@ public class RequestRefund {
     private String location;
     @Column(name="reason")
     private String reason;
-
-
-//    @OneToMany(fetch = FetchType.LAZY)
-//    @JoinColumn(name="id")
     @OneToOne
     private RequestPhoto requestPhoto;
-//    @OneToMany(fetch = FetchType.EAGER)
-//    @PrimaryKeyJoinColumn
-//    @Column(name="request_photo_id")
-//    private List<RequestPhoto> requestPhoto;
-//    private List<RequestPhoto> ListRequestPhoto;
-//    @OneToOne
-//    private RequestDocument requestDocument;
-//    @OneToMany(mappedBy = "id", fetch = FetchType.EAGER)// cascade = { CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH,
-////            CascadeType.REFRESH })
-//    private List<RequestPhoto> photoList;
-//
-//    @OneToMany(mappedBy = "id", fetch = FetchType.EAGER)// cascade = { CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH,
-////            CascadeType.REFRESH })
-//    private List<RequestDocument> documentList;
-//    @OneTo
-//    private RequestPhoto requestPhoto;
     @OneToOne
     private RequestDocument requestDocument;
 }

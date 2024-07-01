@@ -1,6 +1,5 @@
 package ru.coffeemagnate.dispatcher.model;
 
-import com.vladmihalcea.hibernate.type.json.JsonBinaryType;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.TypeDef;
@@ -10,7 +9,7 @@ import org.hibernate.annotations.TypeDef;
 @Table(name="request_document")
 @Setter
 @Getter
-@TypeDef(name = "jsonb", typeClass = JsonBinaryType.class)
+//@TypeDef(name = "jsonb", typeClass = JsonBinaryType.class)
 @NoArgsConstructor
 @AllArgsConstructor
 

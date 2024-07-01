@@ -1,6 +1,5 @@
 package ru.coffeemagnate.dispatcher.service;
 
-import lombok.extern.log4j.Log4j;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.json.JSONObject;

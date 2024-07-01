@@ -238,7 +238,6 @@ public class Telegrambot extends TelegramLongPollingBot{
         var response = new SendMessage();
         response.setChatId(chatId);
         response.setText("Let's started");
-//        request.setReason(word);
         request.setBankName(word);
 
         // Создаем клавиуатуру
@@ -387,7 +386,6 @@ public class Telegrambot extends TelegramLongPollingBot{
     private void setVendingAutomatNumber(long chatId, String word) {
         userStates.put(chatId,UserState.VENDING_NUMBER);
 
-       // request.setVmNumber(String.valueOf(word));
         int number = 0;
         try {
             number = Integer.parseInt(word.trim());
